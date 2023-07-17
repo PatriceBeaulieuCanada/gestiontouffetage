@@ -67,7 +67,7 @@ const Main = () =>{
 			//console.log("on Edit",arg.data)
 			param.action = 'SetScheduledJobs'
 			param.scheduledJobsEntity = arg.data
-			await UseCallApi(param)
+			getData(await UseCallApi(param))
 		}
     }
 

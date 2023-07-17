@@ -100,7 +100,7 @@ const UseCallApi=async(param:any) =>{
 		}
 		
 		try {
-			const HistScheduledJob=await axios.post(url+'/api/ScheduledJobs/addHist?"+ querystring.stringify(params)');
+			const HistScheduledJob=await axios.post(url+'/api/ScheduledJobs/addHist?'+ querystring.stringify(params));
 			return HistScheduledJob.data
 			
 		} catch (err) {
@@ -118,7 +118,7 @@ const UseCallApi=async(param:any) =>{
 		}
 		
 		try {
-			const listhist =await axios.get(url+'/api/ScheduledJobs/GetChosenJobs?"+ querystring.stringify(params)');
+			const listhist =await axios.get(url+'/api/ScheduledJobs/GetChosenJobs?'+ querystring.stringify(params));
 			return listhist.data;
 			
 		} catch (err) {

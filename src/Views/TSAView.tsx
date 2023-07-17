@@ -15,8 +15,9 @@ const TSAView = () =>{
                         <label>1</label>
                     </div>
                     <div className='TSAdescription'>
-                        <label>Nom de l'employé</label>
-                    </div>                    
+                        <label className='TSALabel'>Nom de l'employé</label>                        
+                    </div>
+                    <input className='' width={'500px'}/>                    
                 </div>
 
                 <div className="TSAQuestion">
@@ -24,8 +25,10 @@ const TSAView = () =>{
                         <label>2</label>
                     </div>
                     <div className='TSAdescription'>
-                        <label>Valider l'état personnel de l'employé</label>
-                        <CheckBoxComponent label="Confirmé" />
+                        <label className='TSALabel'>Valider l'état personnel de l'employé</label>
+                        <div className='TSACheckBox'>
+                            <CheckBoxComponent label="Confirmé" />
+                        </div>                        
                     </div>
                 </div>
 
@@ -34,7 +37,7 @@ const TSAView = () =>{
                         <label>3</label>
                     </div>
                     <div className='TSAdescription'>
-                        <label>Observer le poste 10 secondes, identifier et noter les écarts</label>
+                        <label className='TSALabel'>Observer le poste 10 secondes, identifier et noter les écarts</label>
                     </div>                    
                 </div>
 
@@ -48,7 +51,7 @@ const TSAView = () =>{
                         <label>4</label>
                     </div>
                     <div className='TSAdescription'>
-                        <label>Perte de temps lié à la qualité? identifier les causes</label>
+                        <label className='TSALabel'>Perte de temps lié à la qualité? identifier les causes</label>
                     </div>
                 </div>
 
@@ -57,8 +60,10 @@ const TSAView = () =>{
                         <label>5</label>
                     </div>
                     <div className='TSAdescription'>
-                        <label>Est-ce que la cédule de la journée est bien communiqué et compris ? les priorités ?</label>
-                        <CheckBoxComponent label="Confirmé" />
+                        <label className='TSALabel'>Est-ce que la cédule de la journée est bien communiqué et compris ? les priorités ?</label>
+                        <div className='TSACheckBox'>
+                            <CheckBoxComponent label="Confirmé" />
+                        </div>
                     </div>
                 </div>
 
@@ -67,8 +72,10 @@ const TSAView = () =>{
                         <label>6</label>
                     </div>
                     <div className='TSAdescription'>
-                        <label>Est-ce que l'employé a vérifier son matériel pour la commande en cours et la prochaine ?</label>
-                        <CheckBoxComponent label="Confirmé" />
+                        <label className='TSALabel'>Est-ce que l'employé a vérifier son matériel pour la commande en cours et la prochaine ?</label>
+                        <div className='TSACheckBox'>
+                            <CheckBoxComponent label="Confirmé" />
+                        </div>
                     </div> 
                 </div>
 
@@ -81,8 +88,10 @@ const TSAView = () =>{
                     <label>7</label>
                 </div> 
                 <div className='TSAdescription'>
-                    <label>Vérifier la confirmé des méthodes et le respect des meilleurs pratiques ?</label>
-                    <CheckBoxComponent label="Confirmé" />
+                    <label className='TSALabel'>Vérifier la confirmé des méthodes et le respect des meilleurs pratiques ?</label>
+                    <div className='TSACheckBox'>
+                        <CheckBoxComponent label="Confirmé" />
+                    </div>
                 </div>
                 </div>
 
@@ -91,8 +100,10 @@ const TSAView = () =>{
                         <label>8</label>
                     </div>
                     <div className='TSAdescription'>
-                        <label>Communiquer un objectif d'ici à la prochaine TSA (écrire un objectif)</label>
-                        <CheckBoxComponent label="Confirmé" />
+                        <label className='TSALabel'>Communiquer un objectif d'ici à la prochaine TSA (écrire un objectif)</label>
+                        <div className='TSACheckBox'>
+                            <CheckBoxComponent label="Confirmé" />
+                        </div>
                     </div>
                 </div>
 
@@ -101,8 +112,10 @@ const TSAView = () =>{
                         <label>9</label>
                     </div>
                     <div className='TSAdescription'>
-                        <label>Perte de temps, écart humaines ou de cadence ? Identifier les causes</label>
-                        <CheckBoxComponent label="Confirmé" />
+                        <label className='TSALabel'>Perte de temps, écart humaines ou de cadence ? Identifier les causes</label>
+                        <div className='TSACheckBox'>
+                            <CheckBoxComponent label="Confirmé" />
+                        </div>
                     </div>
                 </div>
 
@@ -115,8 +128,10 @@ const TSAView = () =>{
                         <label>10</label>
                     </div>
                     <div className='TSAdescription'>
-                        <label>Perte de temps lié à la formation ? Identifier les causes</label>
-                        <CheckBoxComponent label="Confirmé" />
+                        <label className='TSALabel'>Perte de temps lié à la formation ? Identifier les causes</label>
+                        <div className='TSACheckBox'>
+                            <CheckBoxComponent label="Confirmé" />
+                        </div>
                     </div>                    
                     
                 </div>
@@ -130,8 +145,10 @@ const TSAView = () =>{
                         <label>11</label>
                     </div>
                     <div className='TSAdescription'>
-                        <label>Perte de temps, écart causés par un équipement ou la maintenance ? Identifier les causes</label>
-                        <CheckBoxComponent label="Confirmé" />
+                        <label className='TSALabel'>Perte de temps, écart causés par un équipement ou la maintenance ? Identifier les causes</label>
+                        <div className='TSACheckBox'>
+                            <CheckBoxComponent label="Confirmé" />
+                        </div>
                     </div>                    
                 </div>
 
