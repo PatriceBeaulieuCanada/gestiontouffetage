@@ -1,26 +1,85 @@
-import React from 'react';
-import logo from './logo.svg';
+import {SidebarComponent,SidebarType} from '@syncfusion/ej2-react-navigations';
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom"
+import {useRef} from 'react';
+import Main from './Views/Main';
+import ObjectifView from './Views/ObjectifView';
+import StandardView from './Views/StandardView';
+import CommentView from './Views/CommentView';
+import TSAView from './Views/TSAView';
 import './App.css';
 
-function App() {
+export default function App() {
+
+  const dockBar:any=useRef() ;
+    let type: SidebarType = "Over";
+    const toggleClickMenu=(event:any)=>{
+     //console.log(event)
+     dockBar.current.toggle()         
+    }
+      const toggleClickPrincipale=()=>{
+        window.location.pathname = "/"
+      }
+
+      const toggleClickObjectif=()=>{
+        window.location.pathname = "/objectifview"    
+      }
+      
+      const toggleClickTSA=()=>{
+        window.location.pathname = "/tsaview"    
+      }
+
+      const toggleClickComment=()=>{
+        window.location.pathname = "/commentview"    
+      }
+      
+      const toggleClickStandard=()=>{
+        window.location.pathname = "/standardview"    
+      }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <SidebarComponent id="dockSidebar" ref={dockBar} enableDock={true} dockSize="60px" width="220px" position='Left' type={type}>
+                         <div className="dock">
+                            <ul>
+                                <li className="sidebar-item" id="toggle" onClick={toggleClickMenu}>
+                                    <span className="e-icons expand"/>
+                                    <span className="e-text" title="menu">Menu</span>
+                                </li>
+                                <li className="sidebar-item" onClick={toggleClickPrincipale}>
+                                    <span className="e-icons product"/>
+                                    <span className="e-text" title="principale">Principale</span>
+                                </li>
+                                <li className="sidebar-item" onClick={toggleClickObjectif}>
+                                    <span className="e-icons info"/>
+                                    <span className="e-text" title="info">Objectif</span>
+                                </li>
+                                <li className="sidebar-item" onClick={toggleClickTSA}>
+                                    <span className="e-icons oee"/>
+                                    <span className="e-text" title="info">TSA</span>
+                                </li>
+                                <li className="sidebar-item" onClick={toggleClickComment}>
+                                    <span className="e-icons comment"/>
+                                    <span className="e-text" title="info">Commentaire</span>
+                                </li>
+                                <li className="sidebar-item" onClick={toggleClickStandard}>
+                                    <span className="e-icons standard"/>
+                                    <span className="e-text" title="standard">Standard</span>
+                                </li>                                     
+                            </ul>
+                        </div>
+                    </SidebarComponent>
+        
+        <Router>
+          <Routes>
+            <Route path="/" element={<Main/>}/>
+            <Route path="/objectifview" element={<ObjectifView/>}/>
+            <Route path="/standardview" element={<StandardView/>}/>
+            <Route path="/tsaview" element={<TSAView/>}/>
+            <Route path="/commentview" element={<CommentView/>}/>
+          </Routes>      
+        </Router>                    
     </div>
   );
 }
 
-export default App;
+
