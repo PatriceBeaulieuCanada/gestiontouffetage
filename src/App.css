@@ -336,3 +336,10 @@ span.e-icons {
   grid-column: 5/6;
   /* background-color: red; */
 }
+
+h1{
+  text-align: center;
+  margin: 0px 0px 25px 0px;
+  font-style: italic;
+  text-decoration: underline;
+}

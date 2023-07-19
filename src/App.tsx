@@ -11,7 +11,7 @@ import './App.css';
 export default function App() {
 
   const dockBar:any=useRef() ;
-    let type: SidebarType = "Over";
+    let type: SidebarType = "Auto";
     const toggleClickMenu=(event:any)=>{
      //console.log(event)
      dockBar.current.toggle()         

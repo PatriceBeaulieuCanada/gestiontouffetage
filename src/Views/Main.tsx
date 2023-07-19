@@ -97,8 +97,7 @@ const Main = () =>{
 		param.shift = shift as any;
 		param.action = "GetChosenJob"
 		//console.log(data)
-		getData(await UseCallApi(param))
-			
+		getData(await UseCallApi(param))			
 	}
 
 	const handleEnrClick = async()=>{
@@ -293,6 +292,7 @@ const Main = () =>{
     return(
         <div>
 			<div className='containerHeader'>
+				<h1>Planification des quarts de travail</h1>
 				<div className='containerDate'>
 					<DatePickerComponent width={200} format={'yyyy/MM/dd'} onChange={handleChangeDate}/>
 					<div className='containerLabel'>

@@ -82,8 +82,13 @@ const UseCallApi=async(param:any) =>{
 
 	if(param.action=='GetAllObjective') {
 
+		const params = {
+			dateTime: param.dateTime,
+			shift:param.shift
+		}
+
 		try {
-			const listObjective = await axios.get(url+'/api/Objective/GetObjectives');		
+			const listObjective = await axios.get(url+'/api/Objective/GetObjectives?'+ querystring.stringify(params));		
 			return listObjective.data;
 		} catch (err) {
 			// Handle Error Here
@@ -91,6 +96,22 @@ const UseCallApi=async(param:any) =>{
 			return [];
 		}        
     }	
+
+	if(param.action=='SetObjective') {
+
+		const config = { headers: { 'Content-Type': 'application/json' } };
+
+		const objectiveEntity = param.objectiveEntity		
+
+		try {
+			const listObjective = await axios.put(url+'/api/Objective',objectiveEntity,config);		
+			return listObjective.data;
+		} catch (err) {
+			// Handle Error Here
+			console.error(err);
+			return [];
+		}        
+    }
 
 	if(param.action=='SetHistScheduledJob') {
 
