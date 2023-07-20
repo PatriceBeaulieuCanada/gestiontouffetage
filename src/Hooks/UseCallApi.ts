@@ -100,10 +100,15 @@ const UseCallApi=async(param:any) =>{
 
 		const config = { headers: { 'Content-Type': 'application/json' } };
 
+		const params = {
+			dateTime: param.dateTime,
+			shift:param.shift
+		}
+
 		const objectiveEntity = param.objectiveEntity		
 
 		try {
-			const listObjective = await axios.put(url+'/api/Objective',objectiveEntity,config);		
+			const listObjective = await axios.put(url+'/api/Objective?'+ querystring.stringify(params),objectiveEntity,config);		
 			return listObjective.data;
 		} catch (err) {
 			// Handle Error Here

@@ -12,6 +12,8 @@ import {
 	Edit,
 	IEditCell	
 } from '@syncfusion/ej2-react-grids'
+import { TextBoxComponent } from '@syncfusion/ej2-react-inputs';
+
 import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
 import { MultiSelect, DropDownList} from '@syncfusion/ej2-dropdowns';
 import { ButtonComponent, RadioButtonComponent} from '@syncfusion/ej2-react-buttons';
@@ -63,6 +65,9 @@ const CommentView = () =>{
 
     return (
         <div>
+            <div>
+                <TextBoxComponent multiline={true} placeholder='Entrer votre commentaire ' value=''/>
+            </div>
         <div className='containerHeader'>
             <div className='containerDate'>
                 <DatePickerComponent width={200} format={'yyyy/MM/dd'} onChange={handleChangeDate}/>                

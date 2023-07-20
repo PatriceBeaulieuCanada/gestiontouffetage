@@ -49,7 +49,9 @@ const ObjectifView = () =>{
     const actionComplete = async (arg:any) => {
 		
         if (arg.requestType === 'save') {
-            console.log("on Edit",arg.data)
+            //console.log("on Edit",arg.data)
+			param.dateTime = dateProd as any;
+			param.shift = shift as any;
             param.action = "SetObjective"
 			param.objectiveEntity = arg.data;
 			getData(await UseCallApi(param))
