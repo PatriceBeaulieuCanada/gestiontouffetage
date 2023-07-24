@@ -254,6 +254,10 @@ span.e-icons {
   margin: 15px 0px;
   padding: 10px;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
 }
 
 .footer .lbl1{
@@ -262,12 +266,19 @@ span.e-icons {
   font-weight: bold;
 }
 
+.footer .lblMultiline{
+  display: flex;
+  flex-direction:column;
+}
+
 .footer .inp1{
   font-size: 20px;
   margin-left: 10px;
   width: 50px;
+  height: 30px;
   text-align: center;
 }
+
 
 
 /************************************************************TSAView**************************************************************************/

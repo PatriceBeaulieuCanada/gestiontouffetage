@@ -342,11 +342,16 @@ const Main = () =>{
 				<Inject services={[ Resize, Reorder, Toolbar, ExcelExport, ColumnChooser, Edit ]} />
 			</GridComponent>
 			<div className='footer'>
-				<label className='lbl1'>Total de personne planifié : </label>
+				<div className='lblMultiline'>
+					<label className='lbl1'>Total de personne planifié : </label>
+					<label className='lbl1'>(Mouvement de main-d'oeuvre)</label>
+				</div>
 				<input className='inp1'/>
 				<label className='lbl1'>Total de personne en absence : </label>
 				<input className='inp1'/>
 				<label className='lbl1'>Heure planifié : </label>
+				<input className='inp1'/>
+				<label className='lbl1'>Heure d'absence : </label>
 				<input className='inp1'/>
 				<label className='lbl1'>Heures en over : </label>
 				<input className='inp1'/>
@@ -354,7 +359,6 @@ const Main = () =>{
 				<input className='inp1'/>
 			</div>
         </div>
-
     )}
 
     export default Main

@@ -57,10 +57,6 @@ export default function App() {
                                     <span className="e-icons oee"/>
                                     <span className="e-text" title="info">TSA</span>
                                 </li>
-                                <li className="sidebar-item" onClick={toggleClickComment}>
-                                    <span className="e-icons comment"/>
-                                    <span className="e-text" title="info">Commentaire</span>
-                                </li>
                                 <li className="sidebar-item" onClick={toggleClickStandard}>
                                     <span className="e-icons standard"/>
                                     <span className="e-text" title="standard">Standard</span>
