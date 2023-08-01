@@ -82,7 +82,7 @@ const StandardView = () =>{
 				<ColumnsDirective>
 					<ColumnDirective field='machine.name' headerText='Touffeteur' width='10%' textAlign='Center' allowEditing={false}/>
 					<ColumnDirective field='style.code' headerText='Style' width='10%' textAlign='Center' />
-                    <ColumnDirective field='speed' headerText='Vitesse' width='10%' format="N0"/>
+                    <ColumnDirective field='speed' headerText='Vitesse' width='10%' format="N2"/>
                     <ColumnDirective field='tieAirPerBeam' headerText='Attache par air' width='10%' textAlign='Center'/>
                     <ColumnDirective field='tieGluePerBeam' headerText='Attache par colle' width='10%' textAlign='Center' />
                     <ColumnDirective field='timeForBringChariot' headerText='Apporter Chariot' width='10%' textAlign='Center' />

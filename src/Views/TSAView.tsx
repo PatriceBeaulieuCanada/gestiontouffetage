@@ -55,6 +55,10 @@ const TSAView = () =>{
                     </div>
                 </div>
 
+                <div className="TSAItems">
+                    <label>SERVICE CLIENT</label>
+                </div>
+
                 <div className="TSAQuestion">
                     <div className='TSAnumber'>
                         <label>5</label>

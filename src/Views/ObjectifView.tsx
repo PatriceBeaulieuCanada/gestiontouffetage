@@ -241,7 +241,7 @@ const ObjectifView = () =>{
                     <ColumnDirective field='nbrBringChariot' headerText='Nbr apporter Chariot' width='10%' textAlign='Center'  />
                     <ColumnDirective field='nbrRemoveChariot' headerText='Nbr enlever Chariot' width='10%' textAlign='Center' />					
                     <ColumnDirective field='nbrBacking' headerText='Nbr endos' width='10%' textAlign='Center' />
-					<ColumnDirective field='mtrToProduce' headerText='Quantité estimé (ML)' width='10%' textAlign='Center' allowEditing={false}/>					
+					<ColumnDirective field='mtrToProduce' headerText='Quantité estimé (ML)' width='10%' textAlign='Center' format={"N0"} allowEditing={false}/>					
                     <ColumnDirective field='timeToProduce' headerText='Temps estimé' width='10%' textAlign='Center' allowEditing={false}/>
 				</ColumnsDirective>
 				<Inject services={[ Resize, Reorder, Toolbar, ExcelExport, ColumnChooser, Edit ]} />
