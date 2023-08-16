@@ -96,6 +96,10 @@ html,body{
   content: '\e7ff';
 }
 
+#dockSidebar .operators::before {
+  content: '\e424';
+}
+
 .e-sidebar.e-open .expand::before {
   /* csslint allow: adjoining-classes*/
   content: '\e10e';

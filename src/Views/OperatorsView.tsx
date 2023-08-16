@@ -15,7 +15,7 @@ import {
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import UseCallApi from '../Hooks/UseCallApi';
 
-const StandardView = () =>{
+const OperatorsView = () =>{
 
     const [data, getData] = useState([])
 	const dataRef:any = useRef();
@@ -47,7 +47,7 @@ const StandardView = () =>{
     const handleValideClick =async()=>{
 		grid.current.clearFiltering()
 		grid.current.clearSorting()
-        param.action = "GetAllStandard"
+        param.action = "GetAllEmployees"
 		getData(await UseCallApi(param))
 		//console.log(data)
     }
@@ -76,25 +76,19 @@ const StandardView = () =>{
 				actionComplete={actionComplete}
 				rowSelected={handleGetSelected}
 				allowFiltering={true}
-				// height={600}
+				height={'100%'}
+                width={'75%'}
                 >
 				<ColumnsDirective>
-					<ColumnDirective field='machine.name' headerText='Touffeteur' width='10%' textAlign='Center' allowEditing={false}/>
-					<ColumnDirective field='style.code' headerText='Style' width='10%' textAlign='Center' />
-                    <ColumnDirective field='speed' headerText='Vitesse' width='10%' format="N2"/>
-                    <ColumnDirective field='tieAirPerBeam' headerText='Attache par air' width='10%' textAlign='Center'/>
-                    <ColumnDirective field='tieGluePerBeam' headerText='Attache par colle' width='10%' textAlign='Center' />
-                    <ColumnDirective field='timeForBringChariot' headerText='Apporter Chariot' width='10%' textAlign='Center' />
-                    <ColumnDirective field='timeForRemoveChariot' headerText='Enlever Chariot' width='10%' textAlign='Center' />
-					<ColumnDirective field='timePer28po' headerText='28 pouces' width='10%' textAlign='Center'/>
-                    <ColumnDirective field='timePerBacking' headerText='Endos' width='10%' textAlign='Center' />
-                    <ColumnDirective field='timePerFloor' headerText='Plancher' width='10%' textAlign='Center' />
-                    <ColumnDirective field='timePerKnots' headerText='Noeuds' width='10%' textAlign='Center' />                    				
+					<ColumnDirective field='firstName' headerText='Prénom' width='10%' textAlign='Center'/>
+					<ColumnDirective field='lastName' headerText='Nom' width='10%' textAlign='Center' />
+                    <ColumnDirective field='code' headerText='Code' width='10%' format="N2"/>
 				</ColumnsDirective>
 				<Inject services={[ Resize, Reorder, Toolbar, ExcelExport, ColumnChooser, Edit,Filter ]} />
 			</GridComponent>
         </div>
     
-)}
+    )
+}
 
-export default StandardView
+export default OperatorsView

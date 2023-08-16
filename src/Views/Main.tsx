@@ -335,7 +335,8 @@ const Main = () =>{
                     <ColumnDirective field='machine.name' headerText='Touffeteur' width='10%' textAlign='Center' allowEditing={false}/> 
                     <ColumnDirective field='state' headerText='État' width='10%' textAlign='Center' editType='dropdownedit' edit={stateParams}/>
                     <ColumnDirective field='code' headerText='Style' width='10%' textAlign='Center' type='string' editType='dropdownedit' edit={styleParams}/>
-                    <ColumnDirective field='notes' headerText='Notes divers' width='40%' textAlign='Center' />
+                    <ColumnDirective field='notes' headerText='Notes superviseurs' width='40%' textAlign='Center' />
+					<ColumnDirective field='notes' headerText='Notes opérateurs' width='40%' textAlign='Center' />
                     <ColumnDirective field='fullName' headerText='Opérateurs' width='10%' textAlign='Center' type='string' editType='dropdownedit' edit={employeesParams} />
                     <ColumnDirective field='nbrSets' headerText='Nbs de sets' width='10%' textAlign='Center'/>                   				
 				</ColumnsDirective>

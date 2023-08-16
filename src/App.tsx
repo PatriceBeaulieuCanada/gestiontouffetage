@@ -6,6 +6,7 @@ import ObjectifView from './Views/ObjectifView';
 import StandardView from './Views/StandardView';
 import CommentView from './Views/CommentView';
 import TSAView from './Views/TSAView';
+import OperatorsView from './Views/OperatorsView';
 import './App.css';
 
 export default function App() {
@@ -36,6 +37,10 @@ export default function App() {
         window.location.pathname = "/standardview"    
       }
 
+      const toggleClickOperator=()=>{
+        window.location.pathname = "/operatorsview"
+      }
+
   return (
     <div className='app'>
       <SidebarComponent id="dockSidebar" ref={dockBar} enableDock={true} dockSize="60px" width="220px" position='Left' type={type}>
@@ -60,7 +65,11 @@ export default function App() {
                                 <li className="sidebar-item" onClick={toggleClickStandard}>
                                     <span className="e-icons standard"/>
                                     <span className="e-text" title="standard">Standard</span>
-                                </li>                                     
+                                </li>
+                                <li className="sidebar-item" onClick={toggleClickOperator}>
+                                    <span className="e-icons operators"/>
+                                    <span className="e-text" title="operator">Opérateurs</span>
+                                </li>                                       
                             </ul>
                         </div>
                     </SidebarComponent>
@@ -72,6 +81,7 @@ export default function App() {
             <Route path="/standardview" element={<StandardView/>}/>
             <Route path="/tsaview" element={<TSAView/>}/>
             <Route path="/commentview" element={<CommentView/>}/>
+            <Route path="/operatorsview" element={<OperatorsView/>}/>
           </Routes>      
         </Router>                    
     </div>
