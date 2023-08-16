@@ -105,6 +105,10 @@ html,body{
   content: '\e10e';
 }
 
+.e-sidebar.e-close .expand::before {
+  /* csslint allow: adjoining-classes*/
+  content: '\e10f';
+}
 
 /* end of dockbar icon Style */
 

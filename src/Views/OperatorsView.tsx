@@ -24,7 +24,7 @@ const OperatorsView = () =>{
 
     const mode:any='Dialog'
     const editOptions = { allowEditing: true, allowAdding: true, allowDeleting: true,mode};
-    const toolbarOptions = [ 'ExcelExport', 'ColumnChooser','Edit','Cancel']
+    const toolbarOptions = [ 'ExcelExport', 'ColumnChooser','Add','Edit','Cancel']
     const grid:any = useRef()
   
     const toolbarClick = (args:any) => {
@@ -37,10 +37,16 @@ const OperatorsView = () =>{
     }
 
     const actionComplete = async (arg:any) => {
-		
+
         if (arg.requestType === 'save') {
             //console.log("on Edit",arg.data)
-            
+            if(arg.action === 'add'){
+                console.log("on ajoute",arg.data)
+            }
+
+            if(arg.action === 'edit'){
+                console.log("on edit",arg.data)
+            }
         }
     }
 
