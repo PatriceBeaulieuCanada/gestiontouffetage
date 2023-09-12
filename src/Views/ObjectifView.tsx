@@ -20,7 +20,7 @@ import { ToastComponent } from '@syncfusion/ej2-react-notifications';
 import UseCallApi from '../Hooks/UseCallApi';
 
 const ObjectifView = () =>{
-    const [data, getData] = useState([{shift:"",productionDate:''}])
+    const [data, getData] = useState([{shift:"",productionDate:'',timeToProduce:''}])
 	const dataRef:any = useRef();
   	dataRef.current = {data: data};
 	const [shift, getShift] = useState([])
@@ -183,6 +183,12 @@ const ObjectifView = () =>{
 		return dateProd
 	}
 
+	const getTimeToProduce = () =>{
+
+
+		return "allo"
+	}
+
     return(
         <div>
             <div className='containerHeader'>
@@ -226,8 +232,8 @@ const ObjectifView = () =>{
 				<ColumnsDirective>
                     <ColumnDirective field='employee.fullName' headerText='Opérateur' width='10%' textAlign='Center' 
 					allowEditing={false} isPrimaryKey={true}/>
-					<ColumnDirective field='job.machine.name' headerText='Touffeteur' width='10%' textAlign='Center' allowEditing={false}/>
-					<ColumnDirective field='job.style.code' headerText='Style' width='10%' textAlign='Center' allowEditing={false}/>
+					<ColumnDirective field='machine.name' headerText='Touffeteur' width='10%' textAlign='Center' allowEditing={false}/>
+					<ColumnDirective field='style.code' headerText='Style' width='10%' textAlign='Center' allowEditing={false}/>
                     <ColumnDirective field='tuffterStandardProduction.id' headerText='Standard prod id' width='10%' 
 					textAlign='Center' allowEditing={false} visible={false}/>
 					<ColumnDirective field='tuffterStandardSetup.id' headerText='Standard setup id' width='10%' 
@@ -242,7 +248,8 @@ const ObjectifView = () =>{
                     <ColumnDirective field='nbrRemoveChariot' headerText='Nbr enlever Chariot' width='10%' textAlign='Center' />					
                     <ColumnDirective field='nbrBacking' headerText='Nbr endos' width='10%' textAlign='Center' />
 					<ColumnDirective field='mtrToProduce' headerText='Quantité estimé (ML)' width='10%' textAlign='Center' format={"N0"} allowEditing={false}/>					
-                    <ColumnDirective field='timeToProduce' headerText='Temps estimé' width='10%' textAlign='Center' allowEditing={false}/>
+                    <ColumnDirective field='hoursToProduce' headerText='Temps estimé' width='10%' textAlign='Center' allowEditing={false}/>
+					
 				</ColumnsDirective>
 				<Inject services={[ Resize, Reorder, Toolbar, ExcelExport, ColumnChooser, Edit ]} />
 			</GridComponent>
