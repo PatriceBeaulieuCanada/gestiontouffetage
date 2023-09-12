@@ -335,29 +335,34 @@ const Main = () =>{
                     <ColumnDirective field='machine.name' headerText='Touffeteur' width='10%' textAlign='Center' allowEditing={false}/> 
                     <ColumnDirective field='state' headerText='État' width='10%' textAlign='Center' editType='dropdownedit' edit={stateParams}/>
                     <ColumnDirective field='code' headerText='Style' width='10%' textAlign='Center' type='string' editType='dropdownedit' edit={styleParams}/>
-                    <ColumnDirective field='notes' headerText='Notes superviseurs' width='40%' textAlign='Center' />
-					<ColumnDirective field='notes' headerText='Notes opérateurs' width='40%' textAlign='Center' />
+                    <ColumnDirective field='notesSup' headerText='Notes superviseurs' width='40%' textAlign='Center' />
+					<ColumnDirective field='notesOper' headerText='Notes opérateurs' width='40%' textAlign='Center' />
                     <ColumnDirective field='fullName' headerText='Opérateurs' width='10%' textAlign='Center' type='string' editType='dropdownedit' edit={employeesParams} />
                     <ColumnDirective field='nbrSets' headerText='Nbs de sets' width='10%' textAlign='Center'/>                   				
 				</ColumnsDirective>
 				<Inject services={[ Resize, Reorder, Toolbar, ExcelExport, ColumnChooser, Edit ]} />
 			</GridComponent>
 			<div className='footer'>
-				<div className='lblMultiline'>
-					<label className='lbl1'>Total de personne planifié : </label>
-					<label className='lbl1'>(Mouvement de main-d'oeuvre)</label>
+				<div className='lblFooter'>
+					<div className='lblMultiline'>
+						<label className='lbl1'>Total de personne planifié : </label>
+						<label className='lbl1'>(Mouvement de main-d'oeuvre)</label>
+					</div>
+					<input className='inp1'/>
+					<label className='lbl1'>Total de personne en absence : </label>
+					<input className='inp1'/>
+					<label className='lbl1'>Heure planifié : </label>
+					<input className='inp1'/>
+					<label className='lbl1'>Heure d'absence : </label>
+					<input className='inp1'/>
+					<label className='lbl1'>Heures en over : </label>
+					<input className='inp1'/>
+					<label className='lbl1'>Autres : </label>
+					<input className='inp1'/>
 				</div>
-				<input className='inp1'/>
-				<label className='lbl1'>Total de personne en absence : </label>
-				<input className='inp1'/>
-				<label className='lbl1'>Heure planifié : </label>
-				<input className='inp1'/>
-				<label className='lbl1'>Heure d'absence : </label>
-				<input className='inp1'/>
-				<label className='lbl1'>Heures en over : </label>
-				<input className='inp1'/>
-				<label className='lbl1'>Autres : </label>
-				<input className='inp1'/>
+				<div className='btnFooter'>
+					<ButtonComponent>Validez</ButtonComponent>
+				</div>
 			</div>
         </div>
     )}

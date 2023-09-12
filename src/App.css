@@ -287,7 +287,14 @@ span.e-icons {
   text-align: center;
 }
 
+.footer .lblFooter{
+  display: flex;
+  flex-direction: row;
+}
 
+.footer .btnFooter{
+  margin-left: 30px;
+}
 
 /************************************************************TSAView**************************************************************************/
 
