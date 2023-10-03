@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 
-const url = 'https://localhost:7091'
-//const url = 'http://129.11.186.20:5005'
+//const url = 'https://localhost:7091'
+const url = 'http://129.11.85.2:5005'
 
 const querystring = require('querystring');
 
