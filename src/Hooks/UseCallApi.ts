@@ -1,12 +1,12 @@
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
 
-//const url = 'https://localhost:7091'
-const url = 'http://129.11.85.2:5005'
+const url = 'https://localhost:7091'
+//const url = 'http://129.11.85.2:5005'
 
 const querystring = require('querystring');
 
 const UseCallApi=async(param:any) =>{
-    if(param.action=='GetScheduledJobs') {
+    if(param.action==='GetScheduledJobs') {
         try {
 			const listScheduledJobs = await axios.get(url+'/api/ScheduledJobs/GetScheduledJobs');		
 			return listScheduledJobs.data;
@@ -17,7 +17,7 @@ const UseCallApi=async(param:any) =>{
 		}        
     }
 	
-	if(param.action=='GetNewScheduledJobs') {
+	if(param.action==='GetNewScheduledJobs') {
         try {
 			const listScheduledNewJobs = await axios.get(url+'/api/ScheduledJobs/GetNewScheduledJobs');		
 			return listScheduledNewJobs.data;
@@ -28,7 +28,7 @@ const UseCallApi=async(param:any) =>{
 		}        
     }
 
-	if(param.action=='GetAllEmployees') {
+	if(param.action==='GetAllEmployees') {
         try {
 			const listEmployees = await axios.get(url+'/api/Employees/GetAllEmployees');		
 			return listEmployees.data;
@@ -39,7 +39,7 @@ const UseCallApi=async(param:any) =>{
 		}        
     }	
 
-	if(param.action=='SetScheduledJobs') {
+	if(param.action==='SetScheduledJobs') {
 
 		const config = { headers: { 'Content-Type': 'application/json' } };
 
@@ -55,7 +55,7 @@ const UseCallApi=async(param:any) =>{
 		}        
     }
 	
-	if(param.action=='GetAllStyles') {
+	if(param.action==='GetAllStyles') {
 
 		try {
 			const listStyle = await axios.get(url+'/api/Styles/All');		
@@ -67,7 +67,7 @@ const UseCallApi=async(param:any) =>{
 		}        
     }	
 
-	if(param.action=='GetAllStandard') {
+	if(param.action==='GetAllStandard') {
 
 		try {
 			const listStandard = await axios.get(url+'/api/TufftingStandard/GetAllStandard');		
@@ -79,7 +79,7 @@ const UseCallApi=async(param:any) =>{
 		}        
     }	
 
-	if(param.action=='GetAllObjective') {
+	if(param.action==='GetAllObjective') {
 
 		const params = {
 			dateTime: param.dateTime,
@@ -96,7 +96,7 @@ const UseCallApi=async(param:any) =>{
 		}        
     }	
 
-	if(param.action=='SetObjective') {
+	if(param.action==='SetObjective') {
 
 		const config = { headers: { 'Content-Type': 'application/json' } };
 
@@ -117,7 +117,7 @@ const UseCallApi=async(param:any) =>{
 		}        
     }
 
-	if(param.action=='SetHistScheduledJob') {
+	if(param.action==='SetHistScheduledJob') {
 
 		const params = {
 			dateTime: param.dateTime,
@@ -135,7 +135,7 @@ const UseCallApi=async(param:any) =>{
 		}        
     }	
 
-	if(param.action=='GetChosenJob') {
+	if(param.action==='GetChosenJob') {
 
 		const params = {
 			dateTime: param.dateTime,

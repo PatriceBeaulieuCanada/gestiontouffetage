@@ -183,12 +183,6 @@ const ObjectifView = () =>{
 		return dateProd
 	}
 
-	const getTimeToProduce = () =>{
-
-
-		return "allo"
-	}
-
     return(
         <div>
             <div className='containerHeader'>

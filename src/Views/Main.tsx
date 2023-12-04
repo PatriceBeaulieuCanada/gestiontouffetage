@@ -13,7 +13,7 @@ import {
 	IEditCell	
 } from '@syncfusion/ej2-react-grids'
 import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
-import { MultiSelect, DropDownList} from '@syncfusion/ej2-dropdowns';
+import { MultiSelect} from '@syncfusion/ej2-dropdowns';
 import { ButtonComponent, RadioButtonComponent} from '@syncfusion/ej2-react-buttons';
 import { ToastComponent } from '@syncfusion/ej2-react-notifications';
 import UseCallApi from '../Hooks/UseCallApi';
@@ -83,12 +83,12 @@ const Main = () =>{
 	}
 	
 	const handleValideClick= async()=>{
-		if(dateProd == undefined){
+		if(dateProd === undefined){
 			errorMessageDate();
 			return;
 		}
 
-		if(shift.length == 0){
+		if(shift.length === 0){
 			errorMessageShift();
 			return
 		}
@@ -102,12 +102,12 @@ const Main = () =>{
 
 	const handleEnrClick = async()=>{
 
-		if(dateProd == undefined){
+		if(dateProd === undefined){
 			errorMessageDate();
 			return;
 		}
 
-		if(shift.length == 0){
+		if(shift.length === 0){
 			errorMessageShift();
 			return
 		}
