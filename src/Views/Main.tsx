@@ -24,6 +24,18 @@ const Main = () =>{
     const [data, getData] = useState([{shift:"",productionDate:''}])
 	const [shift, getShift] = useState([])
 	const [dateProd, setDataProd] = useState()
+	const [totalPlanifer, setTotalPlanifer] = useState("")
+	const [totalAbsence, setTotalAbsence] = useState("")
+	const [totalAbsencePartiel, setTotalAbsencePartiel] = useState("")
+	const [heurePlanifer, setHeurePlanifer] = useState("")
+	const [heureAbsence, setHeureAbsence] = useState("")
+	const [heureAbsencePartiel, setHeureAbsencePartiel] = useState("")
+	const [heureOver, setHeureOver] = useState("")
+	const [heure127, setHeure127] = useState("")
+	const [heureAutrePlus, setHeureAutrePlus] = useState("")
+	const [heureAutreMoins, setHeureAutreMoins] = useState("")
+	const [heureFormation, setHeureFormation] = useState("")
+
 	const dataRef:any = useRef()
   	dataRef.current = {data: data}
 	
@@ -289,6 +301,10 @@ const Main = () =>{
 		return dayResult
 	}
 
+	const handleBtnValidez = () =>{
+		alert(totalPlanifer)
+	}
+
     return(
         <div>
 			<div className='containerHeader'>
@@ -344,25 +360,43 @@ const Main = () =>{
 			</GridComponent>
 			<div className='footer'>
 				<div className='lblFooter'>
-					<div className='lblMultiline'>
-						<label className='lbl1'>Total de personne planifié : </label>
-						<label className='lbl1'>(Mouvement de main-d'oeuvre)</label>
+					<div className='lblFooter1'>
+						<div className='lblMultiline'>
+							<label className='lbl1'>Total de personnes planifiés: </label>
+							<label className='lbl1'>(Mouvement de main-d'oeuvre)</label>
+						</div>
+						<input className='inp1' value={totalPlanifer} onChange={(e)=> setTotalPlanifer(e.target.value)}/>
+						<label className='lbl1'>Heures planifiées: </label>
+						<input className='inp1' value={heurePlanifer} onChange={(e)=> setHeurePlanifer(e.target.value)}/>
+						<label className='lbl1'>Total de personnes en absences: </label>
+						<input className='inp1' value={totalAbsence} onChange={(e)=> setTotalAbsence(e.target.value)}/>
+						<label className='lbl1'>Heures d'absences: </label>
+						<input className='inp1' value={heureAbsence} onChange={(e)=> setHeureAbsence(e.target.value)}/>
+						<label className='lbl1'>Total de personnes en absences partielles: </label>
+						<input className='inp1' value={totalAbsencePartiel} onChange={(e)=> setTotalAbsencePartiel(e.target.value)}/>
+						
 					</div>
-					<input className='inp1'/>
-					<label className='lbl1'>Total de personne en absence : </label>
-					<input className='inp1'/>
-					<label className='lbl1'>Heure planifié : </label>
-					<input className='inp1'/>
-					<label className='lbl1'>Heure d'absence : </label>
-					<input className='inp1'/>
-					<label className='lbl1'>Heures en over : </label>
-					<input className='inp1'/>
-					<label className='lbl1'>Autres : </label>
-					<input className='inp1'/>
+					<div className='lblFooter2'>
+						<label className='lbl1'>Heures d'absences partielles: </label>
+						<input className='inp1' value={heureAbsencePartiel} onChange={(e)=> setHeureAbsencePartiel(e.target.value)}/>
+						<label className='lbl1'>Heures en over: </label>
+						<input className='inp1' value={heureOver} onChange={(e)=> setHeureOver(e.target.value)}/>
+						<label className='lbl1'>Heures pour du 127: </label>
+						<input className='inp1' value={heure127} onChange={(e)=> setHeure127(e.target.value)}/>
+						<label className='lbl1'>Heures: autres +: </label>
+						<input className='inp1' value={heureAutrePlus} onChange={(e)=> setHeureAutrePlus(e.target.value)}/>
+						<label className='lbl1'>Heures: autres -: </label>
+						<input className='inp1' value={heureAutreMoins} onChange={(e)=> setHeureAutreMoins(e.target.value)}/>
+						<div className='lblMultiline'>
+							<label className='lbl1'>Heures de formation: </label>
+							<label className='lbl1'>(hors production)</label>
+						</div>
+						<input className='inp1' value={heureFormation} onChange={(e)=> setHeureFormation(e.target.value)}/>
+					</div>
 				</div>
-				<div className='btnFooter'>
-					<ButtonComponent>Validez</ButtonComponent>
-				</div>
+					<div className='btnFooter'>
+						<ButtonComponent onClick={handleBtnValidez} >Validez</ButtonComponent>
+					</div>
 			</div>
         </div>
     )}
